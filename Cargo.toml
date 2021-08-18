@@ -1,0 +1,12 @@
+[package]
+name = "tmux"
+version = "0.1.0"
+edition = "2018"
+
+[[bin]]
+name = "tm"
+path = "src/main.rs"
+
+[dependencies]
+clap = "3.0.0-beta.2"
+hostname = "0.3.1"
