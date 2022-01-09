@@ -1,4 +1,4 @@
-use clap::Clap;
+use clap::Parser;
 use std::io::Result;
 use std::process::{Command, ExitStatus};
 
@@ -38,7 +38,7 @@ fn execute(exe: &str, args: &[&str]) -> Result<ExitStatus> {
     Command::new(exe).args(args).spawn()?.wait()
 }
 
-#[derive(Clap)]
+#[derive(Parser)]
 struct Opts {
     /// List running Tmux sessions
     #[clap(short, long)]
